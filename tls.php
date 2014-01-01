@@ -4,8 +4,8 @@
  * TLS 1.2 decoding proof of concept.
  *
  * Note:
- *   - PHP does not do 64bit packet. Sequence number is limited to 32bits
- *   - Only limited to TLS_RSA_WITH_RC4_128_SHA
+ *   - PHP cannot pack() 64bit numbers. Sequence numbers are limited to 32bits in our case.
+ *   - Only limited to TLS_RSA_WITH_RC4_128_SHA.
  *   - Don't use mcrypt ARCFOUR, or probably any other RC4 library, as state MUST be preserved between calls
  *   - Pre-master-secret, random values and encrypted data taken from wireshark and SSLKEYLOGFILE (google it).
  *   - If you use something from this code for any other reason than curiosity, you're nuts...
